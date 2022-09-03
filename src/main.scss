@@ -1,0 +1,124 @@
+@use "sass:map";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities/api";
+
+@import "./scss/libs.scss";
+@import "./scss/fonts.scss";
+@import "./scss/reset.scss";
+
+@import "./scss/theme/colors.scss";
+@import "./scss/theme/typography.scss";
+@import "./scss/theme/breakpoints.scss";
+
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 14px;
+  }
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$mainTitle: map-get(
+  $map: $headings,
+  $key: h1,
+);
+
+$secondaryTitle: map-get(
+  $map: $headings,
+  $key: h2,
+);
+
+$teritaryTitle: map-get(
+  $map: $headings,
+  $key: h3,
+);
+
+$quaternaryTitle: map-get(
+  $map: $headings,
+  $key: h4,
+);
+
+$bodyLarge: map-get(
+  $map: $body,
+  $key: large,
+);
+
+$bodyMedium: map-get(
+  $map: $body,
+  $key: medium,
+);
+
+$bodySmall: map-get(
+  $map: $body,
+  $key: small,
+);
+
+.main-title {
+  font-size: map-get($map: $mainTitle, $key: fontSize);
+  font-weight: map-get($map: $mainTitle, $key: fontWeight);
+  line-height: map-get($map: $mainTitle, $key: lineHeight);
+}
+
+.secondary-title {
+  font-size: map-get($map: $secondaryTitle, $key: fontSize);
+  font-weight: map-get($map: $secondaryTitle, $key: fontWeight);
+  line-height: map-get($map: $secondaryTitle, $key: lineHeight);
+}
+
+.teritary-title {
+  font-size: map-get($map: $teritaryTitle, $key: fontSize);
+  font-weight: map-get($map: $teritaryTitle, $key: fontWeight);
+  line-height: map-get($map: $teritaryTitle, $key: lineHeight);
+}
+
+.quaternary-title {
+  font-size: map-get($map: $quaternaryTitle, $key: fontSize);
+  font-weight: map-get($map: $quaternaryTitle, $key: fontWeight);
+  line-height: map-get($map: $quaternaryTitle, $key: lineHeight);
+}
+
+.body-large {
+  font-size: map-get($map: $bodyLarge, $key: fontSize);
+  font-weight: map-get($map: $bodyLarge, $key: fontWeight);
+  line-height: map-get($map: $bodyLarge, $key: lineHeight);
+}
+
+.body-medium {
+  font-size: map-get($map: $bodyMedium, $key: fontSize);
+  font-weight: map-get($map: $bodyMedium, $key: fontWeight);
+  line-height: map-get($map: $bodyMedium, $key: lineHeight);
+}
+
+.body-small {
+  font-size: map-get($map: $bodySmall, $key: fontSize);
+  font-weight: map-get($map: $bodySmall, $key: fontWeight);
+  line-height: map-get($map: $bodySmall, $key: lineHeight);
+}

@@ -1,0 +1,27 @@
+$primary: (
+    black: #000000,
+    white: #FFFFFF,
+    orange: #F19D38,
+);
+
+$secondary: (
+    darkBlack: #141920,
+    medium: #252F3D,
+    blue: #007185,
+    red: #B12704,
+    yellow: #F4BF76,
+    darkYellow: #F2A742,
+    orange: #C45500,
+    hoverOrange: #B65B22
+);
+
+$grey: (
+    grey: #DDDDDD,
+    darkGrey: #C9CCCC,
+    disabledGrey: #565959,
+);
+
+$shadow: (
+    medium: 0px 4px 4px rgba(0, 0, 0, 0.16),
+    large: 0px 12px 33px rgba(0, 0, 0, 0.25),
+)

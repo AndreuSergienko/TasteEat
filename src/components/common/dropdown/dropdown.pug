@@ -1,0 +1,21 @@
+mixin dropdown({ firstLine, secondLine, rightIcon, leftIcon, withDropdownList, className })
+    .dropdown(class=className)
+        if rightIcon
+            .dropdown__right-icon
+                img(src=rightIcon, alt="icon")
+        if block 
+            .dropdown__content 
+                block 
+        else
+            .dropdown__content
+                p.body-small=firstLine
+                p.body-medium=secondLine
+        if leftIcon 
+            .dropdown__left-icon 
+                img(src=leftIcon, alt="icon")
+        if withDropdownList
+            .dropdown-list 
+                ul 
+                    li 1
+                    li 2
+                    li 3

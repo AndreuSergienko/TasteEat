@@ -1,0 +1,66 @@
+include ../common/dropdown/dropdown.pug
+
+header.header
+  .first-bar
+    a(href="/" class='header__logo')
+      svg
+        use(xlink:href='../../assets/images/logo.svg#amazon-logo')
+
+    +dropdown({ 
+      firstLine: 'Deliver to John', 
+      secondLine: 'Bangalore 560034', 
+      rightIcon: '../../assets/images/icons/location.svg',
+      className: 'dropdown-1'
+    })
+    include ../searchForm/searchForm
+
+    +dropdown({ 
+      firstLine: '', 
+      secondLine: '', 
+      leftIcon: '../../assets/images/icons/caret.svg', 
+      withDropdownList: true,
+      className: 'dropdown-2'
+      })
+      img(src="../../assets/images/icons/countries/india.svg" alt="india")
+
+    +dropdown({ 
+      firstLine: 'Hello, John', 
+      secondLine: 'Accounts & Lists', 
+      leftIcon: '../../assets/images/icons/caret.svg',
+      withDropdownList: true,
+      className: 'dropdown-3'
+    })
+
+    +dropdown({ 
+      firstLine: 'Returns', 
+      secondLine: '& Orders', 
+      leftIcon: '../../assets/images/icons/caret.svg',
+      withDropdownList: true,
+      className: 'dropdown-4'
+    })
+  .navigation
+    nav.navigation__menu
+      ul.navigation__menu-list
+        li.navigation__menu-item
+          a.navigation__menu-link.hamburger(href='#')
+            img(src='../../assets/images/icons/hamburger.svg').hamburger__icon
+            span All
+        li.navigation__menu-item
+          a.navigation__menu-link(href="/catalog.html") Fashion
+        li.navigation__menu-item
+          a.navigation__menu-link(href="/catalog.html") Mobiles
+        li.navigation__menu-item
+          a.navigation__menu-link(href="/catalog.html") Gift Ideas
+        li.navigation__menu-item.navigation-dropdown
+          a.navigation__menu-link(href="/catalog.html") Prime
+        li.navigation__menu-item
+          a.navigation__menu-link(href="/catalog.html") Amazon Pay
+        li.navigation__menu-item
+          a.navigation__menu-link(href="/catalog.html") Gift Cards
+        li.navigation__menu-item
+          a.navigation__menu-link(href="/catalog.html") Sports, Fitness & Outdoors
+        li.navigation__menu-item
+          a.navigation__menu-link(href="/catalog.html") Computers
+        li.navigation__menu-item
+          a.navigation__menu-link(href="/catalog.html") Customer Service
+

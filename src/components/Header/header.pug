@@ -1,9 +1,14 @@
 header.header
    .container
       .header__top
-         a.header__phone(href='tel: +123456789') Call 123 456 789
+         a.header__phone(href='tel: +123456789') 
+          span.header__phone-text Call 123 456 789
+          i.header__phone-icon.fa-solid.fa-phone
          img.header__logo(src="../../assets/images/logo.svg", alt="logo")
-         button.header__button Reservation
+         button.header__button 
+            span.header__button-text Reservation
+            i.header__button-icon.fa-solid.fa-book
+
    .header__bottom
       .container
          .header__bottom-inner
@@ -22,4 +27,40 @@ header.header
                   li.header__nav-item
                      a.header__nav-link(href="#") Contact Us
             .header__socials
-            | Icons
+               a.header__socials-link(href="#") 
+                  img(src="../../assets/images/icons/instagram.svg", alt="instagram")
+               a.header__socials-link(href="#") 
+                  img(src="../../assets/images/icons/facebook.svg", alt="facebook")
+               a.header__socials-link(href="#") 
+                  img(src="../../assets/images/icons/twitter.svg", alt="twitter")
+               a.header__socials-link(href="#") 
+                  img(src="../../assets/images/icons/pics.svg", alt="pics")
+   button.header__burger
+      i.fa-solid.fa-bars
+   .header__burger-menu
+      button.header__burger-close 
+         i.fa-solid.fa-xmark
+      nav.header__burger-nav
+         ul.header__burger-list
+            li.header__burger-item
+               a.header__burger-link(href="#") Home
+            li.header__burger-item
+               a.header__burger-link(href="#") About Us
+            li.header__burger-item
+               a.header__burger-link(href="#") Our Menu
+            li.header__burger-item
+               a.header__burger-link(href="#") Pages
+            li.header__burger-item
+               a.header__burger-link(href="#") Blog
+            li.header__burger-item
+               a.header__burger-link(href="#") Contact Us
+      .header__burger-socials.header__socials
+               a.header__socials-link(href="#") 
+                  img(src="../../assets/images/icons/instagram.svg", alt="instagram")
+               a.header__socials-link(href="#") 
+                  img(src="../../assets/images/icons/facebook.svg", alt="facebook")
+               a.header__socials-link(href="#") 
+                  img(src="../../assets/images/icons/twitter.svg", alt="twitter")
+               a.header__socials-link(href="#") 
+                  img(src="../../assets/images/icons/pics.svg", alt="pics")
+   .overlay

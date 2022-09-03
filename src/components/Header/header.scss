@@ -7,19 +7,68 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 49px 0;
+		gap: 20px;
+		@media (max-width: 992px) {
+			// justify-content: space-around;
+		}
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
 	}
 
 	&__phone {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 20px 0;
+		padding: 20px 0px;
 		flex: 0 1 295px;
 		border: 2px solid $primaryColor;
 		font-size: 22px;
 		line-height: 33px;
 		letter-spacing: 0.2px;
 		color: #ffffff;
+		transition: 0.3s;
+		&-text {
+			@media (max-width: 425px) {
+				display: none;
+			}
+		}
+		&-icon {
+			display: none !important;
+			@media (max-width: 425px) {
+				display: block !important;
+			}
+		}
+		&:hover {
+			background: $primaryColor;
+			color: $secondaryColor;
+		}
+		@media (max-width: 1200px) {
+			flex-basis: 250px;
+		}
+		@media (max-width: 768px) {
+			flex-basis: auto;
+			width: 70%;
+		}
+		@media (max-width: 425px) {
+			border-radius: 50%;
+			width: auto;
+			padding: 20px;
+		}
+	}
+
+	&__logo {
+		@media (max-width: 1200px) {
+			width: 300px;
+		}
+		@media (max-width: 768px) {
+			display: none;
+		}
+
+		@media (max-width: 425px) {
+			display: block;
+			width: 200px;
+		}
 	}
 
 	&__button {
@@ -30,9 +79,41 @@
 		align-items: center;
 		padding: 20px 0;
 		font-size: 22px;
+		border: 2px solid $primaryColor;
 		line-height: 33px;
 		letter-spacing: 0.44px;
 		color: $secondaryColor;
+		transition: all 0.3s;
+		cursor: pointer;
+		&-text {
+			@media (max-width: 425px) {
+				display: none;
+			}
+		}
+		&-icon {
+			display: none !important;
+			font-size: 30px;
+			@media (max-width: 425px) {
+				display: block !important;
+			}
+		}
+		&:hover {
+			background: transparent;
+			color: #ffffff;
+		}
+		@media (max-width: 1200px) {
+			flex-basis: 250px;
+		}
+		@media (max-width: 768px) {
+			flex-basis: auto;
+			width: 70%;
+		}
+		@media (max-width: 425px) {
+			width: 70px;
+			height: 70px;
+			padding: 20px;
+			border-radius: 50%;
+		}
 	}
 
 	&__bottom {
@@ -42,6 +123,12 @@
 			align-items: center;
 			justify-content: space-between;
 			padding: 20px 0;
+			@media (max-width: 992px) {
+				// justify-content: center;
+			}
+		}
+		@media (max-width: 768px) {
+			display: none;
 		}
 	}
 
@@ -50,6 +137,9 @@
 			display: flex;
 			align-items: center;
 			gap: 60px;
+			@media (max-width: 992px) {
+				gap: 25px;
+			}
 		}
 		&-item {
 		}
@@ -62,6 +152,99 @@
 			&:hover {
 				color: $primaryColor;
 			}
+		}
+	}
+
+	&__socials {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		@media (max-width: 992px) {
+			// display: none;
+		}
+	}
+
+	&__burger {
+		opacity: 1;
+		visibility: visible;
+		font-size: 25px;
+		background: transparent;
+		color: #ffffff;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		transition-delay: 0.3s;
+		@media (max-width: 768px) {
+			display: block;
+			&.hide {
+				transition: none;
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+
+		&-close {
+			font-size: 30px;
+			background: transparent;
+			color: #ffffff;
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+
+		&-menu {
+			display: none;
+			@media (max-width: 768px) {
+				padding: 60px 30px 30px 30px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				position: fixed;
+				max-width: 300px;
+				width: 100%;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				z-index: $burgerMenu-z;
+				background: rgba(0, 0, 0, 0.7);
+				transform: translateX(100%);
+				transition: 0.5s;
+				&.active {
+					transform: translateX(0);
+				}
+				@media (max-width: 425px) {
+					max-width: none;
+					width: 100%;
+				}
+			}
+		}
+		&-nav {
+			width: 100%;
+		}
+		&-list {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		&-item {
+			width: 100%;
+		}
+		&-link {
+			display: block;
+			text-align: center;
+			font-size: 20px;
+			line-height: 30px;
+			letter-spacing: 0.2px;
+			color: #ffffff;
+			padding: 10px 0;
+			&:hover {
+				background: #eee;
+				color: $secondaryColor;
+			}
+		}
+		&-socials {
+			margin-top: auto;
+			justify-content: space-between;
 		}
 	}
 }

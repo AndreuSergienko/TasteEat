@@ -1,121 +1,67 @@
-@use "sass:map";
-@import "../../scss/theme/colors.scss";
-
-$white: map-get($map: $primary, $key: white);
-
-@mixin container($width: 1100) {
-  max-width: #{$width}px;
-  width: 100%;
-  margin: 0 auto;
-}
+@import '../../scss/vars.scss';
 
 .header {
-  &__logo {
-    svg {
-      display: inline;
-      width: 100px;
-      height: 30px;
-    }
-  }
-}
+	background: $secondaryColor;
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 49px 0;
+	}
 
-.first-bar {
-  padding: 0 16px;
-  background-color: map-get($map: $secondary, $key: darkBlack);
-  height: 60px;
-  display: grid;
-  grid-template-columns: repeat(2, max-content) 1fr repeat(4, max-content);
-  grid-column-gap: 20px;
-  align-items: center;
-  grid-template-areas: 
-  "logo dropdown-1 search-form dropdown-2 dropdown-3 dropdown-4"
-  ;
-}
+	&__phone {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px 0;
+		flex: 0 1 295px;
+		border: 2px solid $primaryColor;
+		font-size: 22px;
+		line-height: 33px;
+		letter-spacing: 0.2px;
+		color: #ffffff;
+	}
 
-.search-form {
-  grid-area: search-form;
-}
+	&__button {
+		flex: 0 1 295px;
+		background: $primaryColor;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px 0;
+		font-size: 22px;
+		line-height: 33px;
+		letter-spacing: 0.44px;
+		color: $secondaryColor;
+	}
 
-.dropdown-1 {
-  grid-area: dropdown-1;
-}
-.dropdown-2 {
-  grid-area: dropdown-2;
-}
-.dropdown-3 {
-  grid-area: dropdown-3;
-}
-.dropdown-4 {
-  grid-area: dropdown-4;
-}
+	&__bottom {
+		border-top: 1px solid #5c6168;
+		&-inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 20px 0;
+		}
+	}
 
-.header__logo {
-  grid-area: logo;
+	&__nav {
+		&-list {
+			display: flex;
+			align-items: center;
+			gap: 60px;
+		}
+		&-item {
+		}
+		&-link {
+			font-size: 20px;
+			line-height: 30px;
+			letter-spacing: 0.2px;
+			color: #ffffff;
+			transition: 0.3s;
+			&:hover {
+				color: $primaryColor;
+			}
+		}
+	}
 }
-
-
-.navigation {
-  background: #252f3d;
-  padding: 10px;
-  &__menu-list {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  &__menu-item {
-    padding: 0 12px;
-    border: 1px solid transparent;
-    &:hover {
-      border: 1px solid $white;
-    }
-  }
-  &__menu-link {
-    color: $white;
-  }
-}
-
-.hamburger__icon {
-  margin-right: 4px;
-}
-
-.navigation-dropdown {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-right: 24px;
-  &::after {
-    content: '';
-    width: 12px;
-    height: 12px;
-    background-image: url('../../assets/images/icons/caret.svg');
-    position: absolute;
-    background-size: cover;
-    right: 8px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .first-bar {
-    height: auto;
-    grid-template-columns: max-content 1fr max-content max-content max-content;
-    grid-template-rows: repeat(2, max-content);
-    grid-row-gap: 12px;
-    grid-template-areas: 
-    'search-form search-form search-form search-form search-form' 
-    'logo dropdown-1 dropdown-2 dropdown-3 dropdown-4'
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .first-bar {
-    height: auto;
-    grid-template-columns: repeat(3, max-content);
-    grid-template-rows: repeat(3, max-content);
-    grid-row-gap: 12px;
-    grid-template-areas: 
-    'logo search-form search-form' 
-    'dropdown-1 dropdown-2  dropdown-3'
-    'dropdown-4 dropdown-4'
-  }
-}
-

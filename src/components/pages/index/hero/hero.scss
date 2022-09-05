@@ -1,0 +1,132 @@
+@import '../../../../scss/vars.scss';
+
+.hero {
+	padding-top: 30px;
+	border: 2px dashed #5c6168;
+	background: $secondaryColor;
+
+	&__inner {
+		display: flex;
+		// align-items: center;
+		gap: 15px;
+		@media (max-width: 768px) {
+			flex-direction: column;
+			gap: 0;
+		}
+		@media (max-width: 576px) {
+			gap: 10px;
+		}
+	}
+
+	&__item {
+		flex: 1 1 50%;
+	}
+
+	&__left {
+		align-self: center;
+	}
+
+	&__title {
+		font-family: 'Cormorant Infant';
+		font-weight: 400;
+		font-size: 100px;
+		line-height: 110px;
+		letter-spacing: 0.2px;
+		color: #ffffff;
+		margin-bottom: 26px;
+		@media (max-width: 1200px) {
+			font-size: 90px;
+		}
+		@media (max-width: 992px) {
+			font-size: 77px;
+			line-height: 80px;
+			margin-bottom: 20px;
+		}
+		@media (max-width: 576px) {
+			font-size: 68px;
+			line-height: 80px;
+			margin-bottom: 15px;
+		}
+		@media (max-width: 425px) {
+			font-size: 60px;
+			line-height: 70px;
+		}
+	}
+
+	&__text {
+		font-size: 20px;
+		line-height: 30px;
+		letter-spacing: 0.2px;
+		color: #ffffff;
+		margin-bottom: 35px;
+		@media (max-width: 1200px) {
+			font-size: 18px;
+		}
+		@media (max-width: 992px) {
+			margin-bottom: 25px;
+			font-size: 17px;
+		}
+		@media (max-width: 768px) {
+			// display: none;
+		}
+	}
+
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 230px;
+		padding: 20px 0;
+		color: $primaryColor;
+		background: $secondaryColor;
+		border: 2px solid $primaryColor;
+		transition: 0.3s;
+		cursor: pointer;
+		font-size: 22px;
+		line-height: 33px;
+		letter-spacing: 0.2px;
+		&:hover {
+			background: $primaryColor;
+			color: $secondaryColor;
+		}
+		@media (max-width: 1200px) {
+			font-size: 20px;
+			width: 210px;
+		}
+		@media (max-width: 992px) {
+			padding: 10px 0;
+		}
+		@media (max-width: 375px) {
+			width: 100%;
+		}
+	}
+
+	&__right {
+		border-left: 30px solid rgba(255, 255, 255, 0.1);
+		border-right: 30px solid rgba(255, 255, 255, 0.1);
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		&::before {
+			content: '';
+			position: absolute;
+			top: -30px;
+			left: 0;
+			right: 0;
+			display: block;
+			width: 100%;
+			background: rgba(255, 255, 255, 0.1);
+			height: 30px;
+		}
+		@media (max-width: 768px) {
+			border: none;
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	&__img {
+		margin-top: auto;
+	}
+}

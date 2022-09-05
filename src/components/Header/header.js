@@ -30,4 +30,14 @@ burgerButton.addEventListener('click', (e) => {
 			burgerButton.classList.remove('hide')
 		})
 	}
+
+	const burgerLinks = burgerMenu.querySelectorAll('.header__burger-link')
+
+	burgerLinks.forEach(link => {
+		link.addEventListener('click', (e) => {
+			burgerMenu.classList.remove('active')
+			overlay.classList.remove('active')
+			burgerButton.classList.remove('hide')
+		})
+	})
 })

@@ -4,6 +4,9 @@ import './main.scss'
 
 import './layout/main/main.scss'
 
-//Import components
-import './components/Header/header'
+//Import common components
+import './components/header/header'
 import './components/footer/footer'
+
+// Import index page components
+import './components/pages/index/hero/hero'

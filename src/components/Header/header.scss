@@ -165,8 +165,8 @@
 	}
 
 	&__burger {
-		opacity: 1;
-		visibility: visible;
+		opacity: 0;
+		visibility: hidden;
 		font-size: 25px;
 		background: transparent;
 		color: #ffffff;
@@ -175,7 +175,8 @@
 		right: 20px;
 		transition-delay: 0.3s;
 		@media (max-width: 768px) {
-			display: block;
+			opacity: 1;
+			visibility: visible;
 			&.hide {
 				transition: none;
 				opacity: 0;

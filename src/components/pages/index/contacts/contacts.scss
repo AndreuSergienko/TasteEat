@@ -1,0 +1,103 @@
+@import '../../../../scss/vars.scss';
+
+.contacts {
+	padding: 100px 0 60px;
+	@media (max-width: 992px) {
+		padding: 50px 0;
+	}
+	@media (max-width: 576px) {
+		padding: 30px 0;
+	}
+
+	&__inner {
+		display: flex;
+		gap: 15px;
+		align-items: center;
+		justify-content: center;
+		@media (max-width: 1200px) {
+			gap: 10px;
+		}
+		@media (max-width: 768px) {
+			flex-direction: column;
+			max-width: max-content;
+			margin: 0 auto;
+			gap: 20px;
+		}
+	}
+
+	&__item {
+		flex: 0 1 33.3333%;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		@media (max-width: 1200px) {
+			gap: 8px;
+		}
+		@media (max-width: 768px) {
+			flex: 1 1 auto;
+			width: 100%;
+			gap: 20px;
+		}
+		@media (max-width: 425px) {
+			flex-direction: column;
+         text-align: center;
+         gap: 0;
+		}
+
+		&-img {
+			@media (max-width: 1200px) {
+				width: 70px;
+			}
+			@media (max-width: 992px) {
+				width: 55px;
+			}
+			@media (max-width: 768px) {
+				width: 60px;
+			}
+		}
+
+		&-title {
+			font-family: 'Cormorant Infant';
+			font-size: 30px;
+			line-height: 39px;
+			letter-spacing: 0.2px;
+			color: $secondaryColor;
+			margin-bottom: 5px;
+			@media (max-width: 1200px) {
+				font-size: 25px;
+			}
+			@media (max-width: 992px) {
+				font-size: 23px;
+				margin-bottom: 0;
+			}
+			@media (max-width: 768px) {
+				font-size: 27px;
+			}
+			@media (max-width: 576px) {
+				font-size: 25px;
+			}
+		}
+
+		&-text {
+			font-size: 20px;
+			line-height: 30px;
+			letter-spacing: 0.2px;
+			color: $secondaryDarkColor;
+			@media (max-width: 1200px) {
+				font-size: 18px;
+			}
+			@media (max-width: 992px) {
+				font-size: 16px;
+			}
+			@media (max-width: 768px) {
+				font-size: 18px;
+			}
+			@media (max-width: 576px) {
+				font-size: 17px;
+			}
+			@media (max-width: 425px) {
+				font-size: 16px;
+			}
+		}
+	}
+}

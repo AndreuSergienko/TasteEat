@@ -38,22 +38,22 @@ header.header
    button.header__burger
       i.fa-solid.fa-bars
    .header__burger-menu
-      button.header__burger-close 
+      button.header__burger-close(data-closing)
          i.fa-solid.fa-xmark
       nav.header__burger-nav
          ul.header__burger-list
             li.header__burger-item
-               a.header__burger-link(href="#") Home
+               a.header__burger-link(href="#" data-closing) Home
             li.header__burger-item
-               a.header__burger-link(href="#") About Us
+               a.header__burger-link(href="#" data-closing) About Us
             li.header__burger-item
-               a.header__burger-link(href="#") Our Menu
+               a.header__burger-link(href="#" data-closing) Our Menu
             li.header__burger-item
-               a.header__burger-link(href="#") Pages
+               a.header__burger-link(href="#" data-closing) Pages
             li.header__burger-item
-               a.header__burger-link(href="#") Blog
+               a.header__burger-link(href="#" data-closing) Blog
             li.header__burger-item
-               a.header__burger-link(href="#") Contact Us
+               a.header__burger-link(href="#" data-closing) Contact Us
       .header__burger-socials.header__socials
          a.header__socials-link(href="#") 
             img(src="../../assets/images/icons/instagram.svg" alt="instagram")
@@ -63,4 +63,4 @@ header.header
             img(src="../../assets/images/icons/twitter.svg" alt="twitter")
          a.header__socials-link(href="#") 
             img(src="../../assets/images/icons/pics.svg" alt="pics")
-   .overlay
+   .overlay(data-closing)

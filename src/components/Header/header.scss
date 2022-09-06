@@ -173,14 +173,27 @@
 		position: absolute;
 		top: 20px;
 		right: 20px;
-		transition-delay: 0.3s;
+		transition: 0.3s;
 		@media (max-width: 768px) {
 			opacity: 1;
 			visibility: visible;
 			&.hide {
-				transition: none;
 				opacity: 0;
 				visibility: hidden;
+			}
+			&.scrolled {
+				transition: 0.25s;
+				background: $secondaryColor;
+				position: fixed;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 20px;
+				box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+				border-radius: 50%;
+				top: 20px;
+				right: 20px;
+				z-index: $burgerButton-z;
 			}
 		}
 

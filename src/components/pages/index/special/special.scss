@@ -1,0 +1,134 @@
+@import '../../../../scss/vars.scss';
+
+.special {
+	padding: 110px 0;
+
+	&__title {
+		display: inline-block;
+		border-top: 1px solid $primaryColor;
+		border-bottom: 1px solid $primaryColor;
+		padding-top: 4px;
+		margin-bottom: 12px;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		gap: 60px;
+		// gap: 50px;
+	}
+
+	&__item {
+	}
+
+	&__left {
+		flex: 0 1 491px;
+	}
+
+	&__subtitle {
+		margin-bottom: 13px;
+
+		&-text {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__img {
+		display: block;
+		margin-bottom: 60px;
+	}
+
+	&__button {
+		width: 255px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px 0;
+		border: 2px solid $primaryColor;
+		background: transparent;
+		font-size: 22px;
+		line-height: 33px;
+		letter-spacing: 0.2px;
+		color: $primaryColor;
+		cursor: pointer;
+		transition: 0.3s;
+
+		&:hover {
+			background: $primaryColor;
+			color: #000;
+		}
+	}
+
+	&__right {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 70px;
+		// border-right: 1px solid #000;
+
+		&-item {
+			&-title {
+				font-family: 'Cormorant Infant';
+				font-size: 36px;
+				line-height: 50px;
+				letter-spacing: 0.2px;
+				color: $secondaryColor;
+				margin-bottom: 40px;
+			}
+		}
+
+		&-food {
+			display: flex;
+			flex-direction: column;
+			gap: 45px;
+
+			&-element {
+				display: flex;
+				// justify-content: space-between;
+				align-items: center;
+				gap: 20px;
+			}
+
+			&-img {
+			}
+
+			&-description {
+				flex: 1 1 auto;
+			}
+
+			&-title {
+				font-family: 'Cormorant Infant';
+				font-size: 30px;
+				line-height: 42px;
+				letter-spacing: 0.2px;
+				color: $secondaryColor;
+			}
+
+			&-price {
+				display: flex;
+				align-items: baseline;
+				gap: 10px;
+
+				&-text {
+					flex: 0 1 fit-content;
+				}
+
+				&-line {
+					display: block;
+					flex: 1 1 auto;
+					background: #aaaaaa;
+					height: 2px;
+				}
+
+				&-number {
+					flex: 0 1 fit-content;
+					font-family: 'Cormorant Infant';
+					font-size: 30px;
+					line-height: 42px;
+					letter-spacing: 0.2px;
+					color: $secondaryColor;
+				}
+			}
+		}
+	}
+}

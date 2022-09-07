@@ -23,6 +23,40 @@ body {
 	padding: 0 15px;
 }
 
+.section {
+	&-title {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 22px;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		color: $secondaryColor;
+	}
+
+	&-subtitle {
+		font-family: 'Cormorant Infant';
+		font-size: 40px;
+		line-height: 56px;
+		letter-spacing: 0.2px;
+		color: $secondaryColor;
+		@media (max-width: 1200px) {
+			font-size: 31px;
+		}
+		@media (max-width: 576px) {
+			font-size: 30px;
+		}
+
+		&-text {
+			font-size: 20px;
+			line-height: 30px;
+			color: $secondaryDarkColor;
+			@media (max-width: 1200px) {
+				font-size: 17px;
+			}
+		}
+	}
+}
+
 .overlay {
 	opacity: 0;
 	visibility: hidden;

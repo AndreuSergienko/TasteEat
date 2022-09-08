@@ -31,6 +31,9 @@ body {
 		letter-spacing: 3px;
 		text-transform: uppercase;
 		color: $secondaryColor;
+		@media (max-width: 1200px) {
+			font-size: 13px;
+		}
 	}
 
 	&-subtitle {

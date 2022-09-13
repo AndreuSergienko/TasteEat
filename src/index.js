@@ -14,6 +14,7 @@ import './components/pages/index/contacts/contacts'
 import './components/pages/index/story/story'
 import './components/pages/index/special/special'
 import './components/pages/index/testimonial/testimonial'
+import './components/pages/index/offer/offer'
 
 // Swiper initialization
 import Swiper, { Navigation, Pagination } from 'swiper';

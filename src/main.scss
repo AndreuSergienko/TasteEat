@@ -32,6 +32,9 @@ body {
 		letter-spacing: 3px;
 		text-transform: uppercase;
 		color: $secondaryColor;
+		border-top: 1px solid $primaryColor;
+		border-bottom: 1px solid $primaryColor;
+		padding-top: 5px;
 		@media (max-width: 1200px) {
 			font-size: 13px;
 		}
